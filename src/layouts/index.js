@@ -4,35 +4,49 @@ import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
 
 // import './index.css'
-import './index.scss'
-const Header = () => (
-  <div
-    style={{
-      background: 'rebeccapurple',
-      marginBottom: '1.45rem',
-    }}
-  >
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: 960,
-        padding: '1.45rem 1.0875rem',
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: 'white',
-            textDecoration: 'none',
-          }}
-        >
-          Gatsby
-        </Link>
-      </h1>
+// import './index.scss'
+
+
+
+const Header = () =>  {
+  const headerStyle = {
+    backgroundColor: 'red'
+  };
+  return (
+    <div style={headerStyle}>
+      <h1>hel44pt</h1>
     </div>
-  </div>
-)
+  )
+}
+
+
+
+const Footer = () => {
+  const footerStyle = {
+    backgroundColor: 'blue'
+  }
+  return (
+    <div style={footerStyle}>
+      <h1>Footer</h1>
+    </div>
+  )
+}
+
+
+const Mainsect = () => {
+  const mainsectStyle = {
+    backgroundColor: 'pink'
+  }
+  return (
+    <div>
+
+    </div>
+  )
+}
+
+
+
+
 
 const TemplateWrapper = ({ children }) => (
   <div>
@@ -42,17 +56,20 @@ const TemplateWrapper = ({ children }) => (
         { name: 'description', content: 'Sample' },
         { name: 'keywords', content: 'sample, something' },
       ]}
-    />
-    <Header />
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: 960,
-        padding: '0px 1.0875rem 1.45rem',
-        paddingTop: 0,
-      }}
     >
-      {children()}
+      <link rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
+        integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
+        crossorigin="anonymous">
+      </link>
+    </Helmet>
+
+    <div className="container">
+      <Header />
+      <div>
+        {children()}
+      </div>
+      <Footer/>
     </div>
   </div>
 )

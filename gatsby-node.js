@@ -6,14 +6,17 @@ exports.createPages = ({boundActionCreators, graphql}) => {
   const postTemplate = path.resolve('src/templates/post.js');
 
   return graphql(`{
-    allMarkdownRemark {
+    allMarkdownRemark(limit: 25, sort: {fields: [frontmatter___order], order: ASC}, filter: {frontmatter: {published: {eq: true}}}) {
       edges {
         node {
-          html
           id
+          html
           frontmatter {
             path
             title
+            date
+            order
+            published
           }
         }
       }
