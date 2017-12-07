@@ -1,13 +1,11 @@
-# gatsby-starter-default
-The default Gatsby starter
+# Glendermott History Book - Website
 
-For an overview of the project structure please refer to the [Gatsby documentation - Building with Components](https://www.gatsbyjs.org/docs/building-with-components/)
+## Built using gatsbyjs
 
-Install this starter (assuming Gatsby is installed) by running from your CLI:
+To continue development of this site clone this repo and then
+
 ```
-gatsby new gatsby-example-site
+npm install
 ```
 
-## Deploy
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
+It is currently deployed on Netlify [Here](https://lifeguard-kangaroo-43101.netlify.com/)

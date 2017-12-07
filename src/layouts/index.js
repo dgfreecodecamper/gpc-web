@@ -6,6 +6,25 @@ import Helmet from 'react-helmet'
 // import './index.css'
 // import './index.scss'
 
+const SideMenu = () => {
+  const sideMenuStyle = {
+    backgroundColor: 'green'
+  };
+  return(
+    <div>
+      <ul>
+        <li>chapter 1</li>
+        <li>chapter 2</li>
+        <li>chapter 3</li>
+        <li>chapter 4</li>
+        <li>chapter 5</li>
+        <li>chapter 6</li>
+      </ul>
+    </div>
+  )
+}
+
+
 
 
 const Header = () =>  {
@@ -57,11 +76,6 @@ const TemplateWrapper = ({ children }) => (
         { name: 'keywords', content: 'sample, something' },
       ]}
     >
-      <link rel="stylesheet"
-        href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
-        integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
-        crossorigin="anonymous">
-      </link>
     </Helmet>
 
     <div className="container">
