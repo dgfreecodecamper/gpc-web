@@ -1,0 +1,68 @@
+/*
+basic css file
+*/
+
+/* default position small screens - no side menu */
+
+.container {
+  display: grid;
+  grid-gap: 0.3em;
+  grid-template-rows: minmax(100px, auto) minmax(100px, auto) minmax(100px, auto);
+}
+
+.menu {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .menu{
+    display: block;
+  }
+  .container{
+    display: grid;
+    grid-gap: 0.3em;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: minmax(100px, auto) minmax(100px, auto) minmax(100px, auto);
+  }
+  .header{
+    grid-column: span 12;
+  }
+  .content{
+    grid-column: span 9;
+  }
+  .menu{
+    grid-column: span 3;
+  }
+  .footer{
+    grid-column: span 12;
+  }
+}
+
+
+@media (min-width: 992px) {
+  .pagewrapper{
+    width: 992px;
+    margin: auto;
+  }
+  .menu{
+    display: block;
+  }
+  .container{
+    display: grid;
+    grid-gap: 0.3em;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: minmax(100px, auto) minmax(100px, auto) minmax(100px, auto);
+  }
+  .header{
+    grid-column: span 12;
+  }
+  .content{
+    grid-column: span 9;
+  }
+  .menu{
+    grid-column: span 3;
+  }
+  .footer{
+    grid-column: span 12;
+  }
+}
